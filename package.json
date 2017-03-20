@@ -7,6 +7,6 @@
     "synctos": "1.x"
   },
   "scripts": {
-    "test": "./make-sync-functions.sh && node_modules/.bin/mocha"
+    "test": "./generate-sync-function.sh && node_modules/.bin/mocha"
   }
 }
