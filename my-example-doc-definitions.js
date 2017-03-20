@@ -10,7 +10,7 @@
       foo: {
         type: 'string',
         required: true,
-        regexPattern: new RegExp('^[a-z]{3}$')
+        regexPattern: /^[a-z]{3}$/
       }
     }
   }
