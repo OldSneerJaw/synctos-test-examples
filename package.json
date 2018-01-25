@@ -3,7 +3,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^4.1.0",
-    "synctos": "^1.9.4"
+    "synctos": "^1.10.0"
   },
   "scripts": {
     "test": "etc/generate-sync-function.sh && node_modules/.bin/mocha"

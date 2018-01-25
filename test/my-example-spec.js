@@ -1,5 +1,5 @@
 // Import the synctos test-helper module and the error message formatter to ease the process of writing test cases
-var testHelper = require('../node_modules/synctos/etc/test-helper.js');
+var testHelper = require('synctos').testHelper;
 var errorFormatter = testHelper.validationErrorFormatter;
 
 describe('my example document definitions', function() {
