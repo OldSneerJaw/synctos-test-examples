@@ -3,7 +3,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^4.1.0",
-    "synctos": "^2.0.0"
+    "synctos": "^2.0.1"
   },
   "scripts": {
     "build": "synctos src/my-example-doc-definitions.js build/my-example-sync-function.js",
