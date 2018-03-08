@@ -1,3 +1,8 @@
 An example [synctos](https://github.com/Kashoo/synctos) project that demonstrates the basics of writing specifications/test cases using the built in test-helper module as referenced by the post [Testing your Sync Gateway functions with synctos](https://blog.couchbase.com/testing-sync-gateway-functions-synctos/) on the official Couchbase blog. Refer to the synctos [README](https://github.com/Kashoo/synctos/blob/master/README.md), [test-helper](https://github.com/Kashoo/synctos/blob/master/src/testing/test-helper.js) module and [validation-error-formatter](https://github.com/Kashoo/synctos/blob/master/src/testing/validation-error-formatter.js) module for more information.
 
-Run `npm install` and `npm test` to download project dependencies and then execute the test cases.
+Instructions:
+
+- Download project dependencies: `npm install`
+- Validate document definitions and run test cases: `npm test`
+- Generate the sync functions in the `build` directory: `npm run build`
+- Clean up all build artifacts: `npm run clean`

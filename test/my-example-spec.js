@@ -5,7 +5,7 @@ var errorFormatter = testHelper.validationErrorFormatter;
 describe('my example document definitions', function() {
   // Need to initialize the test helper module with the sync function under test before every test case
   beforeEach(function() {
-    testHelper.initSyncFunction('build/my-example-sync-function.js');
+    testHelper.initDocumentDefinitions('src/my-example-doc-definitions.js');
   });
 
   it('should consider the document valid when all constraints are met', function() {
