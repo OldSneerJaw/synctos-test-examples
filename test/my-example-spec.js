@@ -1,11 +1,13 @@
-// Import the synctos test-helper module and the error message formatter to ease the process of writing test cases
-var testHelper = require('synctos').testHelper;
-var errorFormatter = testHelper.validationErrorFormatter;
+// Import the synctos test-fixture-maker module and the error message formatter to ease the process of writing test cases
+var synctos = require('synctos');
+var testFixtureMaker = synctos.testFixtureMaker;
+var errorFormatter = synctos.validationErrorFormatter;
 
 describe('my example document definitions', function() {
-  // Need to initialize the test helper module with the sync function under test before every test case
+  // Need to initialize the test fixture with the document definitions under test before every test case
+  var testFixture;
   beforeEach(function() {
-    testHelper.initDocumentDefinitions('src/my-example-doc-definitions.js');
+    testFixture = testFixtureMaker.initFromDocumentDefinitions('src/my-example-doc-definitions.js');
   });
 
   it('should consider the document valid when all constraints are met', function() {
@@ -15,7 +17,7 @@ describe('my example document definitions', function() {
       foo: 'bar'
     }
 
-    testHelper.verifyDocumentCreated(doc, [ 'write-' + doc._id ]);
+    testFixture.verifyDocumentCreated(doc, [ 'write-' + doc._id ]);
   });
 
   it('should consider a value of foo that is not three letters invalid', function() {
@@ -25,7 +27,7 @@ describe('my example document definitions', function() {
       foo: 'invalid'
     }
 
-    testHelper.verifyDocumentNotCreated(
+    testFixture.verifyDocumentNotCreated(
       doc,
       doc.type,
       [ errorFormatter.regexPatternItemViolation('foo', /^[a-z]{3}$/) ],
