@@ -15,7 +15,7 @@ describe('my example document definitions', function() {
       _id: 'my-document-id',
       type: 'exampleDoc',
       foo: 'bar'
-    }
+    };
 
     testFixture.verifyDocumentCreated(doc, [ 'write-' + doc._id ]);
   });
@@ -25,7 +25,7 @@ describe('my example document definitions', function() {
       _id: 'my-document-id',
       type: 'exampleDoc',
       foo: 'invalid'
-    }
+    };
 
     testFixture.verifyDocumentNotCreated(
       doc,
