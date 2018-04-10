@@ -5,9 +5,9 @@ var errorFormatter = synctos.validationErrorFormatter;
 
 describe('my example document definitions', function() {
   // Need to initialize the test fixture with the document definitions under test before every test case
-  var testFixture;
+  var testFixture = testFixtureMaker.initFromDocumentDefinitions('src/my-example-doc-definitions.js');
   beforeEach(function() {
-    testFixture = testFixtureMaker.initFromDocumentDefinitions('src/my-example-doc-definitions.js');
+    testFixture.resetTestEnvironment();
   });
 
   it('should consider the document valid when all constraints are met', function() {
